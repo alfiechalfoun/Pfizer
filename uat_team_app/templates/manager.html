@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Manager | UAT Untangled</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body data-role="manager">
+<header><h1>UAT Untangled</h1><p>Manager workspace — triage, edit and approve tester feedback</p><nav><a href="/tester">Tester</a><a class="active" href="/manager">Manager</a><a href="/developer">Developer</a></nav></header>
+<main>
+  <section class="stats" id="stats"></section>
+  <div class="columns">
+    <section class="panel"><div class="row"><h2>Reports waiting for review</h2><button class="secondary" id="refresh">Refresh</button></div><div class="filter"><label for="manager-filter">Show</label><select id="manager-filter"><option value="all">All reports</option><option value="Needs review">Needs review</option><option value="Possible duplicate">Possible duplicate</option><option value="Approved">Approved</option><option value="Dismissed">Dismissed</option></select></div><div id="manager-list" class="cards"></div></section>
+    <section class="panel"><h2>Review selected report</h2><div id="manager-detail" class="hint">Select a report to review its suggested ticket.</div><p id="manager-result" class="message" role="status"></p></section>
+  </div>
+  <section class="panel"><h2>Recent activity</h2><div id="activity"></div></section>
+</main><footer>Classification and duplicate detection are rule-based suggestions, not medical or production AI.</footer>
+</body></html>

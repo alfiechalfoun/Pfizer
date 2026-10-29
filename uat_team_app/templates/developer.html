@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Developer | UAT Untangled</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body data-role="developer">
+<header><h1>UAT Untangled</h1><p>Developer workspace — work on approved tickets and record progress</p><nav><a href="/tester">Tester</a><a href="/manager">Manager</a><a class="active" href="/developer">Developer</a></nav></header>
+<main><div class="columns">
+<section class="panel"><div class="row"><h2>Development queue</h2><button id="refresh" class="secondary">Refresh</button></div><p class="hint">Only manager-approved tickets appear here.</p><div id="developer-list" class="cards"></div></section>
+<section class="panel"><h2>Selected ticket</h2><div id="developer-detail" class="hint">Select an approved ticket to see its details.</div><p id="developer-result" class="message" role="status"></p></section>
+</div></main><footer>Tickets and progress are saved on the shared server.</footer></body></html>

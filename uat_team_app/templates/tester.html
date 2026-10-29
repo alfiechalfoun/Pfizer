@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tester | UAT Untangled</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body data-role="tester">
+  <header><h1>UAT Untangled</h1><p>Tester workspace — report issues and check feedback progress</p>
+    <nav><a class="active" href="/tester">Tester</a><a href="/manager">Manager</a><a href="/developer">Developer</a></nav>
+  </header>
+  <main>
+    <div class="columns">
+      <section class="panel">
+        <h2>Submit feedback</h2>
+        <form id="feedback-form">
+          <label for="tester">Your name</label><input id="tester" required maxlength="80" placeholder="e.g. Alex">
+          <label for="area">Feature being tested</label><input id="area" required maxlength="100" placeholder="e.g. Login">
+          <label for="message">What happened?</label><textarea id="message" required minlength="8" placeholder="What did you do, and what went wrong?"></textarea>
+          <label for="expected">Expected result</label><textarea id="expected" placeholder="What should have happened?"></textarea>
+          <div class="actions"><button type="submit">Submit report</button></div>
+        </form>
+        <p id="form-result" class="message" role="status"></p>
+        <p class="hint">A suggested ticket is created automatically. The manager decides whether to approve it.</p>
+      </section>
+      <section class="panel">
+        <div class="row"><h2>Submitted feedback</h2><button class="secondary" id="refresh">Refresh</button></div>
+        <label for="tester-filter">Filter by tester name</label><input id="tester-filter" placeholder="Enter your name to find reports">
+        <div id="tester-list" class="cards" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+  <footer>Student prototype · Shared records are stored on the server</footer>
+</body>
+</html>
